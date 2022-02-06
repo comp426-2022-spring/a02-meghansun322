@@ -45,7 +45,15 @@ export function coinFlip() {
     ]
  */
 
-function coinFlips(flips) {}
+export function coinFlips(flips) {
+  let flip_list = [];
+  let i = 0;
+  while (i < flips) {
+    flip_list.push(coinFlip());
+    i++;
+  }
+  return flip_list;
+}
 
 /** Count multiple flips
  *
@@ -60,7 +68,22 @@ function coinFlips(flips) {}
  * @returns {{ heads: number, tails: number }}
  */
 
-function countFlips(array) {}
+export function countFlips(array) {
+  var counter = {
+    tails: 0,
+    heads: 0,
+  };
+  var i = 0;
+  while (i < array.length) {
+    if (array[i] === "tails") {
+      counter.tails = counter.tails + 1;
+    } else {
+      counter.heads = counter.heads + 1;
+    }
+    i++;
+  }
+  return counter;
+}
 
 /** Flip a coin!
  *
@@ -73,8 +96,22 @@ function countFlips(array) {}
  * returns: { call: 'tails', flip: 'heads', result: 'lose' }
  */
 
-function flipACoin(call) {}
+export function flipACoin(call) {
+  var return_statement = {
+    call,
+    flip: coinFlip(),
+    result: "",
+  };
 
+  if (return_statement.call === return_statement.flip) {
+    return_statement.result = "win";
+  } else {
+    return_statement.result = "lose";
+  }
+  return return_statement;
+}
+
+console.log(flipACoin("heads"));
 /** Export
  *
  * Export all of your named functions
