@@ -111,7 +111,6 @@ export function flipACoin(call) {
   return return_statement;
 }
 
-console.log(flipACoin("heads"));
 /** Export
  *
  * Export all of your named functions
