@@ -9,7 +9,6 @@
     "flip": "node flip.js",
     "flips": "node flips.js",
     "guess-flip": "node guess-flip.js"
-  
   },
   "repository": {
     "type": "git",
@@ -20,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/comp426-2022-spring/a02-meghansun322/issues"
   },
-  "homepage": "https://github.com/comp426-2022-spring/a02-meghansun322#readme"
+  "homepage": "https://github.com/comp426-2022-spring/a02-meghansun322#readme",
+  "dependencies": {
+    "minimist": "^1.2.5"
+  }
 }
