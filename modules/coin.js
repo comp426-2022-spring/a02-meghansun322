@@ -102,8 +102,9 @@ export function flipACoin(call) {
     flip: coinFlip(),
     result: "",
   };
-
-  if (return_statement.call === return_statement.flip) {
+  if (return_statement.call != "win" || return_statement.call != "lose") {
+    console.error("Not win or lose");
+  } else if (return_statement.call === return_statement.flip) {
     return_statement.result = "win";
   } else {
     return_statement.result = "lose";
